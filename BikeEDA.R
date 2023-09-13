@@ -1,12 +1,6 @@
 bike <- vroom::vroom("./train.csv") #reading in training data
 library(tidyverse)
 
-bike %>%  as_factor(bike$season) +
-  as.factor(bike$holiday)+
-  as.factor(bike$workingday) +
-  as.factor(bike$weather) 
-
-
 dplyr::glimpse(bike)
 DataExplorer::plot_intro(bike)
 DataExplorer::plot_correlation(bike)
