@@ -19,3 +19,9 @@ plot1
 EDA_plot <- (plot1 + plot2) / (plot3 + plot4)
 
 ggsave("EDA_plot.png")
+
+
+
+DataExplorer::plot_histogram(bake_1)
+ggplot(data = bike) +
+  geom_point(mapping = aes(x = log(windspeed), y = count))
